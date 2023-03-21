@@ -58,11 +58,12 @@ namespace Schedule
         void PrintSchedule()
         {
             Console.WriteLine("Modules to learn {0} :", used_modules.Count);
-            used_modules.ForEach(e => Console.WriteLine("\n{0}\tNumber of questions{1}", e.name, e.num_of_questions));
+            used_modules.ForEach(e => Console.WriteLine("\n{0}\tNumber of questions:{1}", e.name, e.num_of_questions));
             Console.WriteLine("\nTotal number of questions:{0}", question_cheked);
+            Console.WriteLine("\nFree hours after studying:{0}", time_left);
             if (time_left > 0 && modules.Count > 0)
             {
-                Console.WriteLine("\nFree time after studying:{0}\nModule that could be covered partially:{1}\n ",time_left,modules[0].name);
+                Console.WriteLine("\nModule that could be covered partially:{0}\n ",modules[0].name);
             }
         }
 
