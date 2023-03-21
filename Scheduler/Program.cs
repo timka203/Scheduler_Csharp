@@ -60,7 +60,7 @@ namespace Schedule
             Console.WriteLine("Modules to learn {0} :", used_modules.Count);
             used_modules.ForEach(e => Console.WriteLine("\n{0}\tNumber of questions{1}", e.name, e.num_of_questions));
             Console.WriteLine("\nTotal number of questions:{0}", question_cheked);
-            if (time_left > 0)
+            if (time_left > 0 && modules.Count > 0)
             {
                 Console.WriteLine("\nFree time after studying:{0}\nModule that could be covered partially:{1}\n ",time_left,modules[0].name);
             }

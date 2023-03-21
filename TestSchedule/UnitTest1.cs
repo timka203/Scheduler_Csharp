@@ -69,5 +69,12 @@ namespace TestSchedule
             Scheduler scheduler = new Scheduler(20, list_sorted);
             Assert.AreEqual(54, scheduler.Schedule());
         }
+        [Test]
+        public void TestSchedulerEmpty()
+        {
+            Setup();
+            Scheduler scheduler = new Scheduler(20, new List<Module>());
+            Assert.AreEqual(0, scheduler.Schedule());
+        }
     }
 }
